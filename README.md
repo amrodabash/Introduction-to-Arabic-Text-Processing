@@ -33,9 +33,10 @@ print(sent_split)
 from camel_tools.morphology.database import MorphologyDB
 from camel_tools.morphology.analyzer import Analyzer
 
-# First, we need to load a morphological database.
-# Here, we load the default database which is used for analyzing
-# Modern Standard Arabic. 
+First, we need to load a morphological database.
+Here, we load the default database which is used for analyzing
+Modern Standard Arabic. 
+
 db = MorphologyDB.builtin_db()
 
 analyzer = Analyzer(db)
@@ -73,7 +74,7 @@ labels = ner.predict_sentence(sentence)
 # Print each token paired with it's NER label
 print(list(zip(sentence, labels)))
 *************************************************************************************
-# Dialect Identification
+## Dialect Identification
 from camel_tools.dialectid import DialectIdentifier
 
 did = DialectIdentifier.pretrained()
