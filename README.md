@@ -66,12 +66,12 @@ from camel_tools.ner import NERecognizer
 
 ner = NERecognizer.pretrained()
 
-# NERecognizer expects pre-tokenized text
+NERecognizer expects pre-tokenized text
 sentence = simple_word_tokenize('ولاية نيويورك هي إحدى ولايات دولة الولايات المتحدة الأمريكية الخمسين.')
 
 labels = ner.predict_sentence(sentence)
 
-# Print each token paired with it's NER label
+Print each token paired with it's NER label
 print(list(zip(sentence, labels)))
 *************************************************************************************
 ## Dialect Identification
